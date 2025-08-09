@@ -3,270 +3,101 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background: #0f0f1a;
-    color: #fff;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Header */
-.anime-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: rgba(15, 15, 26, 0.8);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff6b6b;
-}
-
-.logo i {
-    margin-right: 10px;
-    font-size: 28px;
-}
-
-.navbar .menu {
-    display: flex;
-    list-style: none;
-}
-
-.navbar .menu li {
-    margin: 0 15px;
-}
-
-.navbar .menu li a {
-    color: #ddd;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-    position: relative;
-}
-
-.navbar .menu li a:hover,
-.navbar .menu li a.active {
-    color: #ff6b6b;
-}
-
-.navbar .menu li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #ff6b6b;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
-}
-
-.navbar .menu li a:hover::after,
-.navbar .menu li a.active::after {
-    width: 100%;
-}
-
-.search-box {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    padding: 8px 15px;
-}
-
-.search-box input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    padding: 5px;
-    width: 200px;
-}
-
-.search-box i {
-    color: #ddd;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
-    display: flex;
-    align-items: center;
-    padding: 0 50px;
-}
-
-.hero-content {
+.container {
     max-width: 600px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    animation: fadeInUp 1s ease;
-}
-
-.hero h1 span {
-    color: #ff6b6b;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    opacity: 0.8;
-    animation: fadeInUp 1s ease 0.3s forwards;
-}
-
-.btn-explore {
-    background: #ff6b6b;
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    animation: fadeInUp 1s ease 0.6s forwards;
-}
-
-.btn-explore:hover {
-    background: #ff5252;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
-}
-
-.btn-explore i {
-    margin-left: 8px;
-}
-
-/* Trending Section */
-.trending {
-    padding: 100px 50px;
-}
-
-.section-title {
-    font-size: 32px;
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 3px;
-    background: #ff6b6b;
-    bottom: -10px;
-    left: 0;
-}
-
-.anime-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.anime-card {
-    background: #1a1a2e;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.anime-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-.anime-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.anime-info {
-    padding: 20px;
-}
-
-.anime-info h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.anime-info p {
-    font-size: 14px;
-    color: #aaa;
-    margin-bottom: 10px;
-}
-
-.rating {
-    color: #ffd700;
-    font-weight: bold;
-}
-
-/* Footer */
-.anime-footer {
-    background: #1a1a2e;
-    padding: 50px;
+    margin: 0 auto;
+    padding: 2rem;
     text-align: center;
 }
 
-.footer-content {
+header {
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+.bio {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.footer-logo {
+.link-button {
     display: flex;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff6b6b;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-.footer-logo i {
-    margin-right: 10px;
+.link-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
 }
 
-.social-links a {
-    color: #ddd;
-    font-size: 20px;
-    margin: 0 10px;
-    transition: 0.3s;
+.link-button i {
+    font-size: 1.2rem;
 }
 
-.social-links a:hover {
-    color: #ff6b6b;
+footer {
+    margin-top: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
 }
 
-.copyright {
-    color: #aaa;
-    font-size: 14px;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    h1 {
+        font-size: 2rem;
     }
 }
